@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="scara_bot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00010268 -8.6243E-06 0.043702"
+        rpy="0 0 0" />
+      <mass
+        value="0.4514" />
+      <inertia
+        ixx="0.00041365"
+        ixy="3.8942E-10"
+        ixz="-1.292E-06"
+        iyy="0.00060962"
+        iyz="1.3789E-13"
+        izz="0.00044019" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-0.068163 0.00052554 0.0067254"
+        rpy="0 0 0" />
+      <mass
+        value="0.062421" />
+      <inertia
+        ixx="1.5824E-05"
+        ixy="9.7386E-07"
+        ixz="-6.2302E-21"
+        iyy="0.00014062"
+        iyz="-1.1003E-21"
+        izz="0.00015619" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/Link_1.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/Link_1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0093 -0.00065 0.10805"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="200"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="-0.03911 0.0011398 -0.039802"
+        rpy="0 0 0" />
+      <mass
+        value="0.19711" />
+      <inertia
+        ixx="9.3452E-05"
+        ixy="8.3609E-06"
+        ixz="-3.9827E-05"
+        iyy="0.00033017"
+        iyz="1.4051E-06"
+        izz="0.00032615" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/Link_2.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.18039 0.18039 0.18039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scara_bot/meshes/Link_2.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Link_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.12922 0.0010143 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="1.5" />
+  </joint>
+</robot>
