@@ -27,6 +27,8 @@ setup(
     entry_points={
         'console_scripts': [
             'state_pub = scara_bot_2.state_publisher:main',
+            'state_pub_2 = scara_bot_2.state_publisher_2:main',
+            'path = scara_bot_2.path:main',
             'sp = scara_bot_2.sp2:main',
             'angle_pub = scara_bot_2.angle_publisher:main',
             'angle_sub = scara_bot_2.angle_subscriber:main',
